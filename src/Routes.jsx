@@ -9,6 +9,7 @@ import AIChat from './pages/ai-chat-assistant';
 import ClientManagement from './pages/client-management';
 import ClientProfile from './pages/client-profile';
 import Register from './pages/register';
+import LandingPage from './pages/landing-page';
 
 const Routes = () => {
   return (
@@ -18,6 +19,7 @@ const Routes = () => {
       <RouterRoutes>
         {/* Define your route here */}
         <Route path="/" element={<AIChat />} />
+        <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/calendar-scheduling" element={<CalendarScheduling />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/ai-chat-assistant" element={<AIChat />} />
