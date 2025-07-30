@@ -18,8 +18,10 @@ const Routes = () => {
       <ScrollToTop />
       <RouterRoutes>
         {/* Define your route here */}
-        <Route path="/" element={<AIChat />} />
-        <Route path="/landing-page" element={<LandingPage />} />
+        {/* <Route path="/" element={<AIChat />} />
+        <Route path="/landing-page" element={<LandingPage />} /> */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/app" element={<AIChat />} />
         <Route path="/calendar-scheduling" element={<CalendarScheduling />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/ai-chat-assistant" element={<AIChat />} />

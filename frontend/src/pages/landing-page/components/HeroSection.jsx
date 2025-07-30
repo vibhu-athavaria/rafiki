@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20 lg:py-32">
+    <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -25,7 +25,7 @@ const HeroSection = () => {
                   Coaching Assistant
                 </span>
               </h1>
-              
+
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
                 From session summaries to client tracking – everything in one place
               </p>
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 Join the Beta
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
+
               <button className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-all duration-200">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Demo
@@ -83,7 +83,7 @@ const HeroSection = () => {
                     <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   <div className="h-4 bg-gray-200 rounded w-3/4"></div>
                   <div className="h-4 bg-gray-200 rounded w-1/2"></div>
@@ -106,14 +106,14 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Floating Elements */}
             <motion.div
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20"
             ></motion.div>
-            
+
             <motion.div
               animate={{ y: [10, -10, 10] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}

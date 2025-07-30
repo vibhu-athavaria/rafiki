@@ -105,12 +105,12 @@ const AIChat = () => {
 
   const handleConversationSelect = (conversation) => {
     setActiveConversation(conversation);
-    
+
     // Mark as read
     if (conversation.unreadCount > 0) {
-      setConversations(prev => 
-        prev.map(conv => 
-          conv.id === conversation.id 
+      setConversations(prev =>
+        prev.map(conv =>
+          conv.id === conversation.id
             ? { ...conv, unreadCount: 0 }
             : conv
         )
@@ -138,8 +138,8 @@ const AIChat = () => {
     };
 
     setActiveConversation(updatedConversation);
-    setConversations(prev => 
-      prev.map(conv => 
+    setConversations(prev =>
+      prev.map(conv =>
         conv.id === activeConversation.id ? updatedConversation : conv
       )
     );
@@ -151,9 +151,9 @@ const AIChat = () => {
     setTimeout(() => {
       const aiResponses = [
         `That's an excellent question! Based on your coaching experience and the context you've provided, here are some insights:\n\n**Key Considerations:**\n• Understanding the underlying motivations\n• Identifying potential resistance points\n• Leveraging their existing strengths\n\n**Recommended Approach:**\n1. Start with open-ended questions to explore their perspective\n2. Use reflective listening to validate their concerns\n3. Collaborate on setting realistic, achievable goals\n\nWould you like me to dive deeper into any of these areas?`,
-        
+
         `I understand what you're looking for. Let me provide some evidence-based strategies that align with your coaching style:\n\n**Immediate Actions:**\n• Schedule a dedicated planning session\n• Review their current progress metrics\n• Identify any external factors affecting performance\n\n**Long-term Strategy:**\n• Implement regular check-in protocols\n• Develop accountability partnerships\n• Create milestone celebration moments\n\nHow does this approach resonate with your current coaching methodology?`,
-        
+
         `Great insight! This is a common challenge that many coaches face. Here's how I'd recommend approaching it:\n\n**Assessment Phase:**\n• Evaluate their current readiness for change\n• Identify their core values and motivators\n• Understand their support system\n\n**Implementation Phase:**\n• Break down goals into manageable steps\n• Create clear success metrics\n• Establish regular feedback loops\n\nWhat specific aspect would you like to explore further?`
       ];
 
@@ -170,8 +170,8 @@ const AIChat = () => {
       };
 
       setActiveConversation(finalConversation);
-      setConversations(prev => 
-        prev.map(conv => 
+      setConversations(prev =>
+        prev.map(conv =>
           conv.id === activeConversation.id ? finalConversation : conv
         )
       );
@@ -195,7 +195,7 @@ const AIChat = () => {
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json'
     });
-    
+
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -221,7 +221,7 @@ const AIChat = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <Sidebar />
-        
+
         <main className="lg:ml-72 pt-16">
           <div className="p-6">
             <div className="flex items-center justify-between mb-6">

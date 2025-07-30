@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  MessageSquare, 
-  FileText, 
-  Calendar, 
-  CreditCard, 
-  BarChart3, 
-  Sparkles 
+import {
+  Brain,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Sparkles
 } from 'lucide-react';
 
 const FeatureHighlights = () => {
@@ -32,11 +32,11 @@ const FeatureHighlights = () => {
       title: "Calendar Sync and Session Reminders",
       description: "Seamlessly integrate with your calendar and never miss a session with automated reminders."
     },
-    {
-      icon: CreditCard,
-      title: "Invoicing and Payment Tracking",
-      description: "Streamline your billing process with automated invoicing and payment status tracking."
-    },
+    // {
+    //   icon: CreditCard,
+    //   title: "Invoicing and Payment Tracking",
+    //   description: "Streamline your billing process with automated invoicing and payment status tracking."
+    // },
     {
       icon: BarChart3,
       title: "Client Progress Dashboard",
@@ -50,7 +50,7 @@ const FeatureHighlights = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section id="features" className="py-20 lg:py-32 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,7 +87,7 @@ const FeatureHighlights = () => {
                       <feature.icon className="h-7 w-7 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" />
                     </div>
                   </div>
-                  
+
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                       {feature.title}
