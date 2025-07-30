@@ -1,41 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import ZenIcon from 'components/ui/ZenIcon';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    {
-      title: 'Company',
-      links: [
-        { name: 'About', href: '#about' },
-        { name: 'Contact', href: '#contact' },
-        { name: 'Privacy Policy', href: '#privacy' }
-      ]
-    },
-    {
-      title: 'Product',
-      links: [
-        { name: 'Features', href: '#features' },
-        { name: 'Beta Program', href: '#beta-signup' },
-        { name: 'Roadmap', href: '#roadmap' }
-      ]
-    },
-    {
-      title: 'Support',
-      links: [
-        { name: 'Help Center', href: '#help' },
-        { name: 'Documentation', href: '#docs' },
-        { name: 'Community', href: '#community' }
-      ]
-    }
+    // {
+    //   title: 'Company',
+    //   links: [
+    //     { name: 'About', href: '#about' },
+    //     { name: 'Contact', href: '#contact' },
+    //     { name: 'Privacy Policy', href: '#privacy' }
+    //   ]
+    // },
+    // {
+    //   title: 'Product',
+    //   links: [
+    //     { name: 'Features', href: '#features' },
+    //     { name: 'Beta Program', href: '#beta-signup' },
+    //     { name: 'Roadmap', href: '#roadmap' }
+    //   ]
+    // },
+    // {
+    //   title: 'Support',
+    //   links: [
+    //     { name: 'Help Center', href: '#help' },
+    //     { name: 'Documentation', href: '#docs' },
+    //     { name: 'Community', href: '#community' }
+    //   ]
+    // }
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,24 +45,34 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">R</span>
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg flex items-center justify-center mr-3">
+                <ZenIcon />
               </div>
               <span className="text-2xl font-bold">Rafiki</span>
             </div>
-            
-            <p className="text-gray-400 mb-6 leading-relaxed">
+
+            {/* <p className="text-gray-400 mb-6 leading-relaxed">
               Built for coaches who care. Rafiki combines AI technology with intuitive design to help coaching professionals excel in their practice.
-            </p>
-            
-            <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-600/20 rounded-lg p-4">
+            </p> */}
+
+            {/* <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-600/20 rounded-lg p-4">
               <p className="text-blue-400 font-medium text-sm">
                 ✨ Built for coaches who care
               </p>
-            </div>
+            </div> */}
           </motion.div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-1"
+          >
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Built for coaches who care. Rafiki combines AI technology with intuitive design to help coaching professionals excel in their practice.
+            </p>
+          </motion.div>
           {/* Links Sections */}
           {footerLinks.map((section, index) => (
             <motion.div
@@ -89,7 +100,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Information */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -110,7 +121,7 @@ const Footer = () => {
               <span>San Francisco, CA</span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">
@@ -118,7 +129,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Rafiki. All rights reserved.
             </p>
-            
+
             <div className="flex items-center space-x-6">
               <a href="#privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
                 Privacy Policy
